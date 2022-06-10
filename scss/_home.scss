@@ -6,6 +6,7 @@
     align-items: center;
     box-sizing: border-box;
     padding-left: 15px;
+    flex-shrink: 0;
 
     .marquee_ic {
         display: block;
@@ -45,6 +46,7 @@
     height: 80px;
     display: flex;
     justify-content: center;
+    flex-shrink: 0;
 
     //大登入按鈕
     .loginBtn {
@@ -171,21 +173,25 @@
 //遊戲區
 .homeCenter {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0 15px 8px;
     margin-top: 8px;
+    overflow: hidden;
 
     //遊戲種類選單
     .gameList {
         width: auto;
-        height: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
 
         li {
             width: 25.6vw;
-            margin-bottom: 3px;
+            height: 16.7%;
+            margin-bottom: 5px;
             @include gameListBtn;
 
             &:last-child {
@@ -244,14 +250,16 @@
 
     //遊戲選擇
     .gameBox {
-        flex-wrap: wrap;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 5px;
         width: 63.3vw;
-        height: auto;
+        height: 100%;
         display: none;
         overflow-y: auto;
+        align-content: flex-start;
 
         &.display {
-            display: flex;
+            display: grid;
         }
 
         li {
@@ -260,14 +268,9 @@
             align-items: center;
             border: solid 1px $mainBorder_1;
             border-radius: 5px;
-            width: 30.4vw;
-            height: 23.2vw;
-            padding-top: 3px;
-            margin: 0 4px 5px 0;
-
-            &:nth-of-type(2n) {
-                margin-right: 0;
-            }
+            width: auto;
+            height: auto;
+            padding: 3px 0 1vw;
 
             img {
                 border-radius: 3px;
@@ -277,7 +280,8 @@
             p {
                 font-size: 12px;
                 color: $mainWord_1;
-                padding-top: 0.9vw;
+                padding-top: 1vw;
+                font-weight: bold;
             }
         }
     }

@@ -161,11 +161,11 @@ $(function(){
         $('.filter,.news,.alLogin').addClass('display');
         
         $('.gameBox.slotBox li').attr('onclick',"window.location.href='./html/slotPage.html'");
-        $('.gameBox.fishBox li').attr('onclick',"callFish()");
+        $('.gameBox.fishBox li').attr('onclick',"window.location.href='./html/fishPage.html'");
         $('.gameBox.liveBox li').attr('onclick',"callLive()");
         $('.gameBox.sportBox li').attr('onclick',"callSport()");
         $('.gameBox.lotteryBox li').attr('onclick',"callLottery()");
-        $('.gameBox.boardBox li').attr('onclick',"callBoard()");
+        $('.gameBox.boardBox li').attr('onclick',"window.location.href='./html/boardPage.html'");
 
         $('.operate button:eq(0)').attr('onclick',"window.location.href='./html/deposit.html'");
         $('.operate button:eq(1)').attr('onclick',"window.location.href='./html/transfer.html'");
