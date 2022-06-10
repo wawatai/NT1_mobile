@@ -2894,7 +2894,7 @@ html body .eventList ul li .eventBox {
 html body .eventList ul li .eventBox .eventImg {
   background: #f2f3f3;
 }
-html body .eventList ul li .eventBox p {
+html body .eventList ul li .eventBox .textBox {
   width: 100%;
   height: 36px;
   display: -webkit-box;
@@ -2905,12 +2905,12 @@ html body .eventList ul li .eventBox p {
           align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 15px;
+  padding: 0 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-html body .eventList ul li .eventBox p span {
+html body .eventList ul li .eventBox .textBox p {
   display: block;
   color: #000000;
   font-size: 4vw;
@@ -2920,9 +2920,32 @@ html body .eventList ul li .eventBox p span {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-html body .eventList ul li .eventBox p button {
-  width: 95px;
+html body .eventList ul li .eventBox .textBox div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .eventList ul li .eventBox .textBox div button {
+  width: 74px;
   height: 27px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
+  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  border: solid 1px #cca172;
+  font-size: 4vw;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  font-size: 3.4vw;
+}
+html body .eventList ul li .eventBox .textBox div button:active, html body .eventList ul li .eventBox .textBox div button.active {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
+  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+}
+html body .eventList ul li .eventBox .textBox div button:last-child {
   background: -webkit-gradient(linear, left top, left bottom, from(#9ddbec), color-stop(50%, #0282cc), to(#82aeeb));
   background: linear-gradient(to bottom, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
   border: solid 1px #0282cc;
@@ -2930,10 +2953,16 @@ html body .eventList ul li .eventBox p button {
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
+  font-size: 3.4vw;
+  margin-left: 5px;
+  display: none;
 }
-html body .eventList ul li .eventBox p button:active, html body .eventList ul li .eventBox p button.active {
+html body .eventList ul li .eventBox .textBox div button:last-child:active, html body .eventList ul li .eventBox .textBox div button:last-child.active {
   background: -webkit-gradient(linear, left bottom, left top, from(#9ddbec), color-stop(50%, #0282cc), to(#82aeeb));
   background: linear-gradient(to top, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
+}
+html body .eventList ul li .eventBox .textBox div button:last-child.display {
+  display: block;
 }
 html body .eventDetail {
   width: 100%;
