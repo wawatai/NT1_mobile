@@ -554,8 +554,9 @@ header .logo {
 
 //home - 遊戲廠商圖
 .homeCenter .gameBox img {
-    width: 28.27vw;
-    height: 17.4vw;
+    // width: 28.27vw;
+    // height: 17.4vw;
+    width: 100%;
     object-fit: contain;
 }
 
